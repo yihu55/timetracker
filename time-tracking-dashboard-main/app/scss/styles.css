@@ -1,0 +1,202 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::efter {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 100px;
+  padding: 0;
+  background-color: #0f1424;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 250px 250px 250px;
+      grid-template-columns: 250px 250px 250px 250px;
+  grid-gap: 30px;
+}
+
+.container .main-roll {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  background-color: #1c1f4a;
+  border-radius: 10px;
+}
+
+.container .main-roll img {
+  width: 80px;
+  border: 2px white solid;
+  border-radius: 40px;
+}
+
+.container .main-roll div {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.container .main-roll div h1 {
+  padding-bottom: 80px;
+  line-height: 3rem;
+  margin: 0;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.container .main-roll div:first-child {
+  background-color: #5847eb;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.container .main-roll .menu .aktive {
+  opacity: 1;
+}
+
+.container .main-roll .menu p {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.container .main-roll .menu p:hover {
+  opacity: 1;
+}
+
+.container section {
+  background-color: red;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.container section div {
+  background-color: #1c1f4a;
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+  top: 36px;
+  padding-left: 30px;
+}
+
+.container section div span {
+  float: right;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.container section .hours {
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.container section h2 {
+  padding-top: 30px;
+}
+
+.container .work {
+  background: url(/time-tracking-dashboard-main/images/icon-work.svg) no-repeat;
+  background-color: #ff8c66;
+  background-position: right top;
+}
+
+.container .play {
+  background: url(/time-tracking-dashboard-main/images/icon-play.svg) no-repeat;
+  background-color: #56c2e6;
+  background-position: right top;
+}
+
+.container .study {
+  background: url(/time-tracking-dashboard-main/images/icon-study.svg) no-repeat;
+  background-color: #ff5c7c;
+  background-position: right top;
+}
+
+.container .exercise {
+  background: url(/time-tracking-dashboard-main/images/icon-exercise.svg) no-repeat;
+  background-color: #4acf81;
+  background-position: right top;
+}
+
+.container .social {
+  background: url(/time-tracking-dashboard-main/images/icon-social.svg) no-repeat;
+  background-color: #7536d3;
+  background-position: right top;
+}
+
+.container .selfcare {
+  background: url(/time-tracking-dashboard-main/images/icon-self-care.svg) no-repeat;
+  background-color: #f1c65b;
+  background-position: right top;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    margin: 50px 20px;
+    padding: 0;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .main-roll div h1 {
+    font-size: 1.5rem;
+    padding: 0;
+    position: absolute;
+    left: 150px;
+    top: 120px;
+  }
+  .container .main-roll div h1 br {
+    display: none;
+  }
+  .container .main-roll div .report {
+    position: absolute;
+    left: 150px;
+    top: 80px;
+  }
+  .container .main-roll .menu {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container section {
+    width: 335px;
+    height: 200px;
+  }
+  .container section div {
+    height: 150px;
+  }
+  .container section div p {
+    float: right;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

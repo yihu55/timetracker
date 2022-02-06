@@ -1,0 +1,178 @@
+@import "variables";
+@import "globals";
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::efter {
+  box-sizing: inherit;
+}
+body {
+  margin: 100px;
+  padding: 0;
+  background-color: $veryDarkBlue;
+  font-family: $fontFamily;
+  color: white;
+  font-weight: 100;
+}
+h2 {
+  font-size: $fontSize;
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-gap: 30px;
+  .main-roll {
+    grid-row: 1 / span 2;
+    background-color: $darkBlue;
+    border-radius: 10px;
+    img {
+      width: 80px;
+      border: 2px white solid;
+      border-radius: 40px;
+    }
+    div {
+      padding-left: 30px;
+      padding-top: 30px;
+      h1 {
+        padding-bottom: 80px;
+        line-height: 3rem;
+        margin: 0;
+        font-weight: 300;
+        font-size: 2.5rem;
+      }
+    }
+    div:first-child {
+      background-color: $blue;
+      border-radius: 10px;
+      padding-bottom: 20px;
+    }
+    .menu .aktive {
+      opacity: 1;
+    }
+    .menu p {
+      cursor: pointer;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  section {
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+
+    div {
+      background-color: $darkBlue;
+      border-radius: 10px;
+      height: 200px;
+      position: relative;
+      top: 36px;
+      padding-left: 30px;
+      span {
+        float: right;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+      }
+    }
+    .hours {
+      font-weight: 400;
+      font-size: 3rem;
+      margin: 0;
+    }
+    h2 {
+      padding-top: 30px;
+    }
+  }
+  .work {
+    background: url(/time-tracking-dashboard-main/images/icon-work.svg)
+      no-repeat;
+    background-color: $orange;
+    background-position: right top;
+  }
+  .play {
+    background: url(/time-tracking-dashboard-main/images/icon-play.svg)
+      no-repeat;
+    background-color: $softBlue;
+    background-position: right top;
+  }
+  .study {
+    background: url(/time-tracking-dashboard-main/images/icon-study.svg)
+      no-repeat;
+    background-color: $lightRed;
+    background-position: right top;
+  }
+  .exercise {
+    background: url(/time-tracking-dashboard-main/images/icon-exercise.svg)
+      no-repeat;
+    background-color: $limeGreen;
+    background-position: right top;
+  }
+  .social {
+    background: url(/time-tracking-dashboard-main/images/icon-social.svg)
+      no-repeat;
+    background-color: $violet;
+    background-position: right top;
+  }
+  .selfcare {
+    background: url(/time-tracking-dashboard-main/images/icon-self-care.svg)
+      no-repeat;
+    background-color: $softOrange;
+    background-position: right top;
+  }
+}
+@media screen and (max-width: 376px) {
+  body {
+    margin: 50px 20px;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .main-roll {
+      div h1 {
+        font-size: 1.5rem;
+        padding: 0;
+
+        br {
+          display: none;
+        }
+        position: absolute;
+        left: 150px;
+        top: 120px;
+      }
+      div .report {
+        position: absolute;
+        left: 150px;
+        top: 80px;
+      }
+      .menu {
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    section {
+      width: 335px;
+      height: 200px;
+
+      div {
+        height: 150px;
+        p {
+          float: right;
+          position: absolute;
+          bottom: 25px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
